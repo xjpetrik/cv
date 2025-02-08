@@ -1,0 +1,173 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[left=15mm, right=15mm, top=15mm, bottom=20mm]{geometry}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage{fontawesome5}
+\usepackage{tcolorbox}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{ulem}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{lmodern}
+\usepackage{helvet}
+\usepackage{hyperref}
+
+\newcommand{\badge}[2]{%
+    \raisebox{-2mm}{%
+        \tcbox[colframe=#1, colback=#1!20, arc=2.5mm, 
+               boxrule=0.3mm, left=1mm, right=1mm, top=0.5mm, bottom=0.5mm, 
+               boxsep=0.5mm, nobeforeafter]{\fontsize{4mm}{0mm}\textbf{\textcolor{#1}{#2}}}%
+    }%
+}
+
+\newcommand{\customlink}[3]{
+    \textbf{#1:\\} \href{#2}{\color{primary} {\texttt{#3}}}
+}
+\let\olditem\item
+\renewcommand{\item}{\olditem \fontsize{4.2mm}{5.2mm}\selectfont}
+\renewcommand{\familydefault}{\sfdefault}
+
+\definecolor{primary}{HTML}{007ACC}
+\definecolor{secondary}{HTML}{333333}
+\definecolor{lightgray}{HTML}{F2F2F2}
+
+\titleformat{\section}
+{\fontsize{6mm}{3mm}\bfseries\color{primary}}
+{}{0mm}{}
+[\color{primary}\rule{\linewidth}{1pt}]
+\titleformat{\subsubsection}{\bfseries}{}{0mm}{}
+
+
+\titleformat{\subsection}
+{\fontsize{4.6mm}{0mm}\bfseries\color{secondary}}
+{}{0mm}{}
+
+
+\newcommand{\placeentry}[3]{\subsubsection{\fontsize{4.8mm}{0mm}\textbf{\color{primary} \href{#3}{#1} } \textbf{@} {\color{secondary} #2}}}
+
+
+
+\begin{document}
+
+% HEADER
+\noindent
+\noindent
+    \begin{minipage}{0.45\textwidth}
+        {\fontsize{10mm}{12mm}\bf John Doe}
+    \end{minipage}
+    \begin{minipage}{0.30\textwidth}
+        \begin{flushleft}
+            \fontsize{4mm}{5mm}\selectfont
+            {\faMapMarker* \hspace{1mm} City / Country} \\
+            {\faPhone \hspace{1mm} +1 123 456 789} \\
+            {\faGithub \hspace{1mm} \customlink{GitHub}{https://github.com/johndoe}{github.com/johndoe}}\ \\
+            {\faUserShield \hspace{0.1mm} \customlink{TryHackMe}{https://tryhackme.com/p/johndoe}{thm.com/p/johndoe}}
+        \end{flushleft}
+    \end{minipage}
+    \hspace{1mm}
+    \begin{minipage}{0.1\textwidth}
+        \begin{tcolorbox}[width=35mm,height=35mm, colframe=secondary, colback=white, sharp corners]
+            \centering
+            \textbf{Photo}
+        \end{tcolorbox}
+    \end{minipage}
+\vspace{5mm}
+
+\noindent
+\begin{minipage}[t][170mm]{0.33\textwidth}
+    \vspace{0.62mm}
+    \section{Soft Skills}
+    \begin{itemize}[noitemsep,topsep=0mm]
+        \item Analytical Thinking
+        \item Fast Learner
+        \item Problem Solving
+    \end{itemize}
+    \section{Hard Skills}
+    \begin{itemize}[noitemsep,topsep=0mm]
+        \item Driver license
+        \item Certification 1
+        \item Certification 2
+        \item Certification 3
+    \end{itemize}
+    \subsection{Programming Languages}
+    \begin{itemize}[noitemsep,topsep=0mm]
+        \item Python \badge{primary}{intermediate}
+        \item JavaScript \badge{primary}{advanced}
+        \item Bash \badge{primary}{basic}
+    \end{itemize}
+    \subsection{Markup \& Other Languages}
+    \begin{itemize}[noitemsep,topsep=0mm]
+        \item SQL
+        \item Markdown
+        \item LaTeX
+        \item HTML+CSS
+    \end{itemize}
+    \subsection{Tools}
+    \begin{itemize}[noitemsep,topsep=0mm]
+        \item Git
+        \item MS Office
+        \item Sysinternals
+        \item Metasploit
+    \end{itemize}
+    \subsection{Operating Systems}
+    \begin{itemize}[noitemsep,topsep=0mm]
+        \item Linux
+        \begin{itemize}
+         \item Arch
+         \item Debian
+        \end{itemize}
+        \item Window
+        \begin{itemize}
+        \item Windows 11
+         \item Windows Server
+        \end{itemize}
+    \end{itemize}
+    \subsection{Frameworks}
+    \begin{itemize}[noitemsep,topsep=0mm]
+        \item React
+        \item .NET
+    \end{itemize}
+    \vspace{3mm}
+    
+\end{minipage}
+\hspace{0.01\textwidth}
+\hfill
+\begin{minipage}[t][170mm]{0.63\textwidth} 
+% WORK EXPERIENCE
+    \section{Work Experience}
+    \subsection{2022 – 2024}
+    \placeentry{Cybersecurity Analyst}{Example Company}{https://google.com}
+    \begin{itemize}[noitemsep,topsep=0mm]
+        \item Monitored and analyzed network traffic for security threats
+        \item Developed and implemented incident response procedures
+        \item Conducted penetration testing and vulnerability assessments
+    \end{itemize}
+    \subsection{2020 – 2022}
+    \placeentry{IT Administrator}{Example Company}{https://google.com}
+    \begin{itemize}[noitemsep,topsep=0mm]
+        \item Maintained and managed internal IT systems
+        \item Provided technical support to employees
+    \end{itemize}
+
+% EDUCATION
+    \section{Education}
+    \subsection{2023 – Present}
+    \placeentry{Computer Science}{Example University}{https://google.com}
+    \begin{itemize}[noitemsep,topsep=0mm]
+        \item Deep dive into machine learning and AI
+        \item Developed a full-stack web application using React and Node.js
+        \item Implemented database optimizations to improve query efficiency
+        \item Built an automated threat detection system using Python
+    \end{itemize}
+    \vspace{2mm}
+    \subsection{2019 – 2023}
+    \placeentry{Information Technology}{Example High School}{https://google.com}
+    \begin{itemize}[noitemsep,topsep=0mm]
+        \item Learned fundamentals of software development and networking
+        \item Developed an Android app as part of a final project
+        \item Created a custom Linux distribution for security testing
+    \end{itemize}
+\end{minipage}
+
+\end{document}
