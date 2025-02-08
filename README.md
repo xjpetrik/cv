@@ -1,5 +1,5 @@
 # 📄 CV Templates
-This repository contains simple yet elegant\* CV templates in LaTeX.
+This repository contains simple yet elegant\* CV templates in $LaTeX$.
 - No need for obscure dependencies/packages. 
 - All templates follow columnar layout.
 
