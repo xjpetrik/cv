@@ -1,0 +1,131 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[left=1.5cm, right=1.5cm, top=1.5cm, bottom=2cm]{geometry}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+
+\titleformat{\section}{\huge\bfseries\color{black}}{}{0pt}{}[{\titlerule[0.5mm]}]
+\titleformat{\subsection}{\large\bfseries}{}{0mm}{}
+\titleformat{\subsubsection}{\bfseries}{}{0mm}{}
+
+\begin{document}
+
+% HEADER
+\noindent
+\hspace{3mm}
+\begin{minipage}{0.40\textwidth}
+    {\Huge\bf John Doe}
+\end{minipage}
+\begin{minipage}{0.35\textwidth}
+    \begin{flushleft}
+    \small
+        \textbf{Location:} City / Country \\
+        \textbf{Phone:} +1 123 456 789 \\
+        \textbf{Email:} john.doe@email.com \\
+        \textbf{Portfolio:} \texttt{github.com/johndoe} \\
+        \textbf{TryHackMe:} \texttt{tryhackme.com/p/johndoe}
+    \end{flushleft}
+\end{minipage}
+\hspace{1mm}
+\begin{minipage}{0.1\textwidth}
+    \begin{tcolorbox}[width=3.5cm,height=3.5cm, sharp corners]
+        \centering
+        \textbf{Photo}
+    \end{tcolorbox}
+\end{minipage}
+\vspace{5mm}
+
+
+\begin{minipage}[t][0.8\textheight]{0.33\textwidth}
+    \section*{Hard skills}
+    \begin{itemize}[noitemsep,topsep=0pt]
+        \item Driver license
+        \item Certification 1
+        \item Certification 2
+        \item Certification 3
+    \end{itemize}
+    \subsection{Programming languages}
+    \begin{itemize}[noitemsep]
+        \item Python
+        \item JavaScript
+        \item Bash
+    \end{itemize}
+    \subsection{Markup and other languages}
+    \begin{itemize}[noitemsep,topsep=0pt]
+        \item SQL
+        \item Markdown
+        \item Latex
+        \item HTML+CSS
+    \end{itemize}
+    \subsection{Tools}
+    \begin{itemize}[noitemsep,topsep=0pt]
+        \item Git
+        \item MS Office
+        \item Sysinternals
+        \item Metasploit
+    \end{itemize}
+    \subsection{Operating systems}
+    \begin{itemize}[noitemsep,topsep=0pt]
+        \item Linux
+        \begin{itemize}
+         \item Arch
+         \item Debian
+        \end{itemize}
+        \item MS Windows
+        \begin{itemize}
+         \item Windows 11
+         \item Windows Server
+        \end{itemize}
+    \end{itemize}
+    \subsection{Frameworks}
+    \begin{itemize}[noitemsep,topsep=0pt]
+        \item React
+        \item .NET
+    \end{itemize}
+    \vspace{3mm}
+    \section{Soft Skills}
+    \begin{itemize}[noitemsep,topsep=0pt]
+        \item Analytic
+        \item Fast learner
+    \end{itemize}
+\end{minipage}
+\hspace{0.01\textwidth}
+\hfill
+\begin{minipage}[t][0.8\textheight]{0.6\textwidth} 
+% WORK
+    \section*{Work Experience}
+    \subsection{2023 – 2024}
+    \subsubsection{OSINT Researcher @ Example Company}
+    \begin{itemize}[noitemsep,topsep=0pt]
+        \item Conducted research using open-source intelligence (OSINT)
+        \item Automated data collection with custom scripts
+    \end{itemize}
+    \subsection{2021 – 2023} 
+    \subsubsection{IT Administrator @ Example Company}
+    \begin{itemize}[noitemsep,topsep=0pt]
+        \item Maintained and managed internal IT systems
+        \item Provided technical support to employees
+    \end{itemize}
+% EDU
+    \section*{Education}
+    \subsection{2023 – Present} 
+    \subsubsection{Computer Science @ Example University}
+    \begin{itemize}[noitemsep,topsep=0pt]
+        \item Deep dive into machine learning and AI
+        \item Developed a full-stack web application using React and Node.js
+        \item Implemented database optimizations to improve query efficiency
+        \item Built an automated threat detection system using Python
+    \end{itemize}
+    \vspace{2mm}
+    \subsection{2019 – 2023}
+    \subsubsection{Information Technology @ Example High School}
+    \begin{itemize}[noitemsep,topsep=0pt]
+        \item Learned fundamentals of software development and networking
+        \item Developed an Android app as part of a final project
+        \item Created a custom Linux distribution for security testing
+    \end{itemize}
+\end{minipage}
+\end{document}
